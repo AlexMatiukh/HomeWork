@@ -1,0 +1,37 @@
+body{
+background: url(main-bg.jpg)
+}
+.conteiner-header{
+background-color: white;
+width: 1050px;
+height: 205px;
+margin-left: auto;
+margin-right: auto;
+}
+.contacts{
+display: flex;
+flex-direction: column;
+float: right;
+color: #053b91;
+margin-right: 20px;
+margin-bottom: 40px;
+}
+.contacts > span > h3{
+margin-top: 0px;
+margin-bottom: 0px
+}
+.search > button{
+height:40px;
+}
+.content-right{
+float: right;
+}
+ul.menu-list li{
+display: inline;
+margin-bottom: 0px;
+}
+.main-menu{
+background-color: #dc3545; 
+margin-bottom: 0px;
+display: flex;
+}

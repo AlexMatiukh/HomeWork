@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<title>Проект 2.0</title>
+	<style type="text/css">
+		.main-menu{
+			background-color: #fff;
+			display: flex;
+			justify-content:flex-end
+		}
+		.Ad{
+			background-image: linear-gradient(
+      			rgba(0, 0, 255, 0.45), 
+    			rgba(0, 255, 0, 0.45)),
+      		url(BGforest.jpg);
+      		display: flex;
+      		height: 575px;
+      	}
+		.crls{
+			height: 332px;
+		    width: 1050px;
+		    margin-left: auto;
+			margin-right: auto;
+			display: flex;
+		}
+		#First-slide{
+			background-image: url(Ad1.jpg);
+			height: 332px;
+			width: 1050px;
+			text-align: center;
+			position: absolute;
+		}
+		#Second-slide{
+			background-image: url(Ad2.jpg);
+			height: 332px;
+			width: 1050px;
+			text-align: center;
+			position: absolute;
+		}
+		#Third-slide{
+			background-image: url(Ad3.jpg);
+			height: 332px;
+			width: 1050px;
+			text-align: center;
+			position: absolute;
+		}
+		#Ad1-button{
+			position: relative;
+			top: 262px;
+		}
+		#Ad2-button{
+			position: relative;
+			top: 262px;
+		}
+		#Ad3-button{
+			position: relative;
+			top: 262px;
+		}
+		.Check-In{
+			text-align: center;
+			color: white;
+			background-color: #007bff; 
+		}
+		.fullscreen-bg {
+			overflow: hidden;
+			z-index: -100;
+			position: relative;
+			height: 100%;
+			width: 100%;
+			padding-top:45%;
+		}
+		.fullscreen-bg_video {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+		#registration{
+			background-image: url(bg-chesk-in.jpg);		
+		}
+		.reg-mein{
+			width: 800px;
+			height: 400px;
+			text-align: center;
+			background-color: white;
+			margin-right: auto;
+			margin-left: auto; 
+		}
+		.log{
+			font-family: cursive;
+			margin-top: 20px;
+		}
+		.e-mail{
+			font-family: cursive;
+			margin-top: 20px;
+		}
+		.phone{
+			font-family: cursive;
+			margin-top: 20px;
+		}
+		.pass{
+			font-family: cursive;
+			margin-top: 20px;
+		}
+		.check{
+			margin-top: 20px;
+		}
+		#Ad1-info{
+			text-align: center;
+		}
+		.Ad1-info{
+			float: left;
+		}
+		#Ad2-info{
+			text-align: center;
+			background-color: #007bff;
+			color: white;
+		}
+		.Ad2-info{
+			float: right;
+		}
+		#Ad3-info{
+			text-align: center;	
+		}
+		.Ad3-info{
+			float: left;
+		}
+		.title > h1{
+			text-align: center;
+			color: white;
+			background-color: #007bff;
+		}
+		span{
+			font-family: cursive;	
+		}
+		#contacts{
+			display: flex;
+			justify-content: space-around;
+			text-align: center;
+		}
+		.contacts-title > h1{
+			text-align: center;
+			color: white;
+			background-color: #007bff;
+		}
+	</style>
+</head>
+<body>
+	<div class="main-menu">
+		<a href="#registration"><button type="button" class="btn btn-primary" style="margin-right: 5px">Регистрация</button></a>
+		<a href="#contacts"><button type="button" class="btn btn-primary" style="margin-right: 5px">Контакты</button></a>
+		<a href="#About-us"><button type="button" class="btn btn-primary" style="margin-right: 5px">О нас</button></a>
+	</div>
+	<div class="Ad">
+		<div class="crls">
+			<div id="carousel-example-generic" class="carousel-slide" data-ride="carousel">
+	      			<ol class="carousel-indicators">
+	        			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+	        			<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+	        			<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+	      			</ol>
+	      		<div class="carousel-inner" role="listbox" id="First-slide">
+	        		<div id="First-button" class="carousel-item active">
+	          			<a href="#Ad1-info"><button id="Ad1-button" type="button" class="btn btn-secondary">Условия Акции</button></a>
+	        		</div>
+	        		<div class="carousel-item" id="Second-slide">
+	          			<a href="#Ad2-info"><button id="Ad2-button" type="button" class="btn btn-primary">Условия Акции</button></a>
+	        		</div>
+	        		<div class="carousel-item" id="Third-slide">
+	          			<a href="#Ad3-info"><button id="Ad3-button" type="button" class="btn btn-info">Условия Акции</button></a>
+	        		</div>
+	      		</div>
+	      		<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+	        		<span class="icon-prev" aria-hidden="true"></span>
+	        		<span class="sr-only">Previous</span>
+	      		</a>
+	      		<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+	        		<span class="icon-next" aria-hidden="true"></span>
+	        		<span class="sr-only">Next</span>
+	      		</a>
+	    	</div>
+	    </div>
+	</div>
+	<div class="Check-In">
+		<h3>Акция!</h3>
+		<p>С сегодняшнего дня любой новый посетитель, который просто зарегистрируется у нас на сайте автоматически получает $10 в поинтах на свой внутренний счет. Для новых пользователей напомним, что Поинты по программе лояльности можно получать за различные действия на сайте (посты, комментарии), а потом можно обменять их на реальные деньги по курсу 1 поинт = 1 цент США. </p>
+		<p>Тем, у кого уже есть аккаунт на нашем сайте советуем в эти предпраздничные дни почаще заходить на сайт, акции для вас еще впереди!</p>
+		<div class="Check">
+			<input name="search" placeholder="E-mail" size="35" style="padding-left: 5px; height:38px;">
+			<button type="button" class="btn btn-secondary" style="margin-right: 20px; margin-bottom: 5px;">Регистрация</button>
+		</div>
+	</div>
+	<div class="fullscreen-bg">
+		<video loop muted autoplay poster="cloud.jpg" class="fullscreen-bg_video">
+			<source src="cloud.mp4" type="video/mp4">
+		</video>
+	</div>
+	<div id="registration">
+		<div class="reg-mein">
+			<h3>Регистрация</h3>
+			<div class="log">
+				<label> Логин:</label> 
+				<input required name="search" placeholder="" size="35" style="padding-left: 5px; height:38px;">
+			</div>
+			<div class="e-mail">
+				<label>E-mail:</label>
+				<input required name="search" placeholder="" size="35" style="padding-left: 5px; height:38px;">
+			</div>
+			<div class="phone">
+				<label>Телефон:</label>
+				<input required name="search" placeholder="" size="33" style="padding-left: 5px; height:38px;">
+			</div>
+			<div class="pass">
+				<label>Пароль:</label>
+				<input required name="search" type="password" placeholder="" size="34" style="padding-left: 5px; height:38px;">
+			</div>
+			<div class="check">
+				<input type="checkbox" id="check1"><label for="check1">Согласен(а) с политокой конфиденциальности</label><Br>
+				<input type="checkbox" id="check2"><label for="check1">Согласен(а) на обработку персональных данных</label><Br>
+			</div>
+			<div>
+				<button type="button" class="btn btn-primary" style="margin-right: 5px">Регистрация</button>	
+			</div>
+		</div>
+	</div>
+	<div id="Ad1-info">
+		<h2>Акция!</h2>
+		<h4>Pаспродажа моделей 2018 года</h4>
+		<img class="Ad1-info" src="Ad1-info.jpg" width="196" title="Info" />
+		<p>Для участия в акции:
+		1. Заказывайте акционный товар в магазинах. 
+		2. Выберите один из удобных для Вас способов получения: 
+		- самовывоз из магазинов; 
+		- самовывоз из отделения "Нова Пошта"; 
+		- доставка по адресу. 
+		3. Выберите удобный для Вас способ оплаты заказа в нашем интернет-магазине: 
+		- оплата наличными в гривнах - доступно; 
+		- оплата платежной картой онлайн или на кассе магазина - доступно; 
+		- оплата «СУПЕР РАССРОЧКА!» - до 25 платежей; 
+		- оплата частями (онлайн или на кассе магазина) от ПриватБанк – до 25 платежей; 
+		- безналичная оплата - доступно.</p>
+	</div>
+	<div id="Ad2-info">
+		<h2>Акция!</h2>
+		<h4>Покупайте акционную технику и выбирайте себе подарок!</h4>
+		<img class="Ad2-info" src="Ad2-info.jpg" width="250" title="Info2" />
+		<p>1. В акции принимают участие товары с пометкой.
+		2. Оформляйте заказ, добавляя в корзину выбранный Вами товар и подарок или позвоните в колл-центр, где скидку оформит оператор при подтверждении заказа
+		3. Данную выгоду вы можете потратить на любой товар с сайта, и оформить как подарок, кроме товара который уже принимает участие в акции или в коде товара с буквой "Р".
+		4. Скидки по разным акциям данного предложения не суммируются со скидками по другим акционным программам. 
+		5. Под скидкой понимается процент скидки, который указан на ценнике в магазине, или плашка в интернет-магазине 
+		6. Если стоимость выбранного Вами подарка меньше суммы отведенного для подарка, то остаток сгорает. Если стоимость выбранного Вами подарка больше суммы отведенного для подарка, то необходимо осуществить доплату
+		7. Выберите один из удобных для Вас способ получения: 
+		- самовывоз из магазина Eldorado; 
+		- самовывоз из отделения "Нова Пошта"; 
+		- адресная доставка. 
+		8. Выберите удобный для Вас способ оплаты заказа в нашем интернет-магазине: 
+		- оплата наличными в гривнах - доступно; 
+		- оплата платежной картой онлайн или на кассе магазина - доступно; 
+		- оплата «СУПЕР РАССРОЧКА!®»* - до 10 платежей; 
+		- оплата частями (онлайн или на кассе магазина) от ПриватБанк – до 10 платежей; 
+		- безналичная оплата - доступно.</p>
+	</div>
+	<div id="Ad3-info">
+		<h2>Акция!</h2>
+		<h4>Супер растрочка!</h4>
+		<img class="Ad3-info" src="Ad3-info.jpg" width="200" title="Info3"/>s
+		<p>1. Добавьте акционный товар в корзину на сайте, заполните заявку на сайте, с вами свяжется менеджер интернет-магазина для уточнения магазина в котором вам будет удобно забрать товар и подписать нужные документы. В случае оформления кредита в магазине, обратитесь к консультанту для получения счета на товар и подойдите к кредитному эксперту для оформления заявки.
+		2. Выберите один из удобных для Вас способов получения:
+		- самовывоз из магазинов;
+		- самовывоз из отделения "Новая Почта" (при оформлении заказа на сайте);
+		- доставка по адресу (при оформлении заказа на сайте);
+		3. Выберите удобный для Вас способ оплаты заказа в нашем интернет-магазине:
+		- Оплата наличными в гривнах - доступно;
+		- Оплата платежной картой онлайн или на кассе магазина - доступно;
+		- Оплата частями - доступно до 25 платежей;
+		- "СУПЕР РАССРОЧКА!®"- доступно до 25 платежей;
+		- безналичная оплата - доступно.
+		</p>
+	</div>
+	<div id="About-us">
+		<span class="title">
+			<h1>О нас!</h1>
+		</span>
+		<p>
+			Прежде всего – попытка сделать ваши покупки предельно удобными, выгодными и радостными!
+			С момента открытия нашего первого магазина в Киеве неизменно дарит Украинцам массу уникальных предложений и приятных эмоций.
+			Некоторые наши постоянные покупатели до сих пор вспоминают то, ранее невиданное в столице торжественное открытие первого магазина на Крещатике, которое длилось на протяжении 4 дней, в течение которых магазин был просто под завязку заполнен киевлянами… А уже в следующем году к счастливым покупателям нашей сети присоединяется Винница и Одесса, растет и количество столичных магазинов.
+		</p>
+		<span>
+			Первый гипермаркет электроники в Украине!
+		</span>
+		<p>
+			Стремительно набирая популярность по всей стране, Компания открывает в Киеве первый в Украине гипермаркет электроники и увеличивает число своих магазинов в 5 раз – до 32 торговых точек!
+			Было бы возможным такое развитие без активного участия наших покупателей? Конечно, нет! Лучшие новинки, выгодные цены и интересные бонусы, качественный сервис и, конечно, хорошее настроение – это ежегодно привлекает все больше украинцев, которые присоединяются к нашему Клубу выгодных покупок.
+			Отделившись от иностранных учредителей, в 2008 году компания становится 100% украинской компанией, которая вскоре присоединяет к себе сети "Домотехника", "АБВ" и "МегаМакс", привлекает консультантов ведущих мировых ритейлеров (BestBuy, Mediamarkt) и открывает собственный интернет-магазин.
+		</p>
+		<span>
+			Сеть №1 в Украине!
+		</span>
+		<p>
+			Новый этап развития начинается в 2013 году после слияния с сетью "Технополис" – с тех пор компания становится розничной сетью электроники и бытовой техники №1 по товарообороту в Украине.
+			По состоянию на 2016 год вас ожидают более 130 магазинов в 60 городах по всей Украине, которые предлагают превосходный выбор из 50 000 моделей современной персональной техники Samsung, Bosch, Philips, Asus, Lg, Whirlpool, Sony и других ведущих производителей.
+			Кроме того, в магазинах для вас работает, также и специальная сервисная служба – всегда готова помочь вам быстро настроить любую технику, установить нужные программы, провести диагностику или обслуживание максимально быстро и без лишних хлопот!
+		</p>
+		<span>
+			Что дальше?
+		</span>
+		<p>
+			Сегодня – как и каждый день – лидер национального рынка, компания предлагает вам лучшую мировую электронику, заботясь при этом о комфорте, приятных впечатлениях и выгодной цене всех ваших покупок.
+			Именно поэтому мы активно внедряем в Украине инновационный формат мультиканальной продажи – OmniChannel – который позволяет Вам в любое время выбирать, сравнивать, покупать, а при необходимости и возвращать любые товары Eldorado наиболее удобным для вас способом по единым ценам: в любом магазине или в онлайне.
+			Есть вопросы? Пожалуйста, звоните в нашу информационную службу, а также смело обращайтесь за консультацией к менеджерам в любом нашем магазине. Ведь сотрудники компании – это главные двигатели нашего успеха! Именно благодаря высокому профессионализму, вовлеченности и активности членов нашей команды был и остается любимым партнером миллионов украинцев.
+		</p>
+	</div>
+	<div class="contacts-title">
+		<h1>
+			Контакты
+		</h1>
+	</div>
+	<div id="contacts">
+		<div class="gps">
+			<h5>
+				<img width="40" src="gps.png"/>
+				<p>Address</p>
+			</h5>
+			<p>
+				Kiev, Street, 55
+			</p>
+		</div>
+		<div class="phone">
+			<h5>
+				<img width="40" src="phone.png"/>
+				<p>Phone</p>
+			</h5>
+				<p>+38 (044) 111-22-33</p>
+				<p>+38 (050) 444-55-66</p>
+				<p>+38 (050) 777-88-99</p>
+		</div>
+		<div class="mail">
+			<h5>
+				<img width="40" src="mail.png"/>
+				<p>Email</p>
+			</h5>
+			<p>
+				MAIL@INFO.COM
+			</p>
+		</div>
+	</div>
+</body>
+</html>
