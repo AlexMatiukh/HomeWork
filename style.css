@@ -1,37 +1,144 @@
-body{
-background: url(main-bg.jpg)
+.main-menu{
+background-color: #fff;
+display: flex;
+justify-content:flex-end;
 }
-.conteiner-header{
-background-color: white;
+.Ad{
+background-image: linear-gradient(
+rgba(0, 0, 255, 0.45), 
+rgba(0, 255, 0, 0.45)),
+url(BGforest.jpg);
+display: flex;
+height: 575px;
+}
+.crls{
+height: 332px;
 width: 1050px;
-height: 205px;
 margin-left: auto;
 margin-right: auto;
-}
-.contacts{
 display: flex;
-flex-direction: column;
+}
+#First-slide{
+background-image: url(Ad1.jpg);
+height: 332px;
+width: 1050px;
+text-align: center;
+position: absolute;
+}
+#Second-slide{
+background-image: url(Ad2.jpg);
+height: 332px;
+width: 1050px;
+text-align: center;
+position: absolute;
+}
+#Third-slide{
+background-image: url(Ad3.jpg);
+height: 332px;
+width: 1050px;
+text-align: center;
+position: absolute;
+}
+#Ad1-button{
+position: relative;
+top: 262px;
+}
+#Ad2-button{
+position: relative;
+top: 262px;
+}
+#Ad3-button{
+position: relative;
+top: 262px;
+}
+.Check-In{
+text-align: center;
+color: white;
+background-color: #007bff; 
+}
+.fullscreen-bg {
+overflow: hidden;
+z-index: -100;
+position: relative;
+height: 100%;
+width: 100%;
+padding-top:45%;
+}
+.fullscreen-bg_video {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+}
+#registration{
+background-image: url(bg-chesk-in.jpg);		
+}
+.reg-mein{
+width: 800px;
+height: 400px;
+text-align: center;
+background-color: white;
+margin-right: auto;
+margin-left: auto; 
+border-radius: 30px;
+}
+.log{
+font-family: cursive;
+margin-top: 20px;
+}
+.e-mail{
+font-family: cursive;
+margin-top: 20px;
+}
+.phone{
+font-family: cursive;
+margin-top: 20px;
+}
+.pass{
+font-family: cursive;
+margin-top: 20px;
+}
+.check{
+margin-top: 20px;
+}
+#Ad1-info{
+text-align: center;
+}
+.Ad1-info{
+float: left;
+border-radius: 20px;
+}
+#Ad2-info{
+text-align: center;
+background-color: #007bff;
+color: white;
+}
+.Ad2-info{
 float: right;
-color: #053b91;
-margin-right: 20px;
-margin-bottom: 40px;
+border-radius: 20px;
 }
-.contacts > span > h3{
-margin-top: 0px;
-margin-bottom: 0px
+#Ad3-info{
+text-align: center;	
 }
-.search > button{
-height:40px;
+.Ad3-info{
+float: left;
+border-radius: 20px;
 }
-.content-right{
-float: right;
+.title > h1{
+text-align: center;
+color: white;
+background-color: #007bff;
 }
-ul.menu-list li{
-display: inline;
-margin-bottom: 0px;
+span{
+font-family: cursive;	
 }
-.main-menu{
-background-color: #dc3545; 
-margin-bottom: 0px;
+#contacts{
 display: flex;
+justify-content: space-around;
+text-align: center;
+}
+.contacts-title > h1{
+text-align: center;
+color: white;
+background-color: #007bff;
 }
